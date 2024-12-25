@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        {% if R_or_L is none %}
+          <button type="submit">Login</button>
+        {% else %}
+          <button type="submit">Register</button>
+        {% endif %}
+    </form>
+{% endblock %}
